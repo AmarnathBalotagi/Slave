@@ -39,24 +39,27 @@ public class Naukri_Resumetest {
 		act.moveByOffset(100, 200).click().perform();   
 		WebElement ViewProfile = driver.findElement(By.xpath("//a[text()='View']"));
 		ViewProfile.click();
-		WebElement Updateresume = driver.findElement(By.xpath("//input[@value='Update resume']"));
+		WebElement Updateresume = driver.findElement(By.xpath("//input[@id ='attachCV']"));
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", Updateresume);
-		Updateresume.click();
+	
+		Updateresume.sendKeys("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
+		//Updateresume.click();
 		
-		 StringSelection ss	= new StringSelection("C:\\Users\\Amarnath\\eclipse-workspace\\Selenium_Prep\\Resume\\Amarnath_QA_3.2 YOE.pdf");
-		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-		 Robot rb = new Robot();
-		 rb.delay(2000);
-		 rb.keyPress(KeyEvent.VK_CONTROL);
-		 rb.keyPress(KeyEvent.VK_V);
-		 
-		 rb.keyRelease(KeyEvent.VK_CONTROL);
-		 rb.keyRelease(KeyEvent.VK_V);
-		 
-		 rb.keyPress(KeyEvent.VK_ENTER);   
-		 rb.keyRelease(KeyEvent.VK_ENTER);
+//		 StringSelection ss	= new StringSelection("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
+//		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//		 Robot rb = new Robot();
+//		 rb.delay(2000);
+//		 rb.keyPress(KeyEvent.VK_CONTROL);
+//		 rb.keyPress(KeyEvent.VK_V);
+//		 
+//		 rb.keyRelease(KeyEvent.VK_CONTROL);
+//		 rb.keyRelease(KeyEvent.VK_V);
+//		 
+//		 rb.keyPress(KeyEvent.VK_ENTER);   
+//		 rb.keyRelease(KeyEvent.VK_ENTER);
+		
 		 System.out.println("----------Resume has been Uploaded-----------");
-		 driver.quit();
+		// driver.quit();
 	}
 
 }
