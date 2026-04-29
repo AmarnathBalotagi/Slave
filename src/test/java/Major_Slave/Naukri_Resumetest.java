@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -43,6 +44,14 @@ public class Naukri_Resumetest {
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", Updateresume);
 	
 		Updateresume.sendKeys("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
+		//WebElement Toast = driver.findElement(By.xpath("//p[text()='Resume has been successfully uploaded.']"));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[text()='Resume has been successfully uploaded.']")));
+		 WebElement msg = driver.findElement(By.xpath("//div[@class='msgBox success ']//p"));
+		 System.out.println(msg.getText());
+		 if(msg.getText().equals("Success")) {
+			 System.out.println("----------Resume has been Uploaded-----------");
+			 driver.quit();
+		 }
 		//Updateresume.click();
 		
 //		 StringSelection ss	= new StringSelection("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
@@ -58,8 +67,8 @@ public class Naukri_Resumetest {
 //		 rb.keyPress(KeyEvent.VK_ENTER);   
 //		 rb.keyRelease(KeyEvent.VK_ENTER);
 		
-		 System.out.println("----------Resume has been Uploaded-----------");
-		// driver.quit();
+		 
+		 driver.quit();
 	}
 
 }
