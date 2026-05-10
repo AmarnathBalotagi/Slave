@@ -43,7 +43,7 @@ public class Naukri_Resumetest {
 		WebElement Updateresume = driver.findElement(By.xpath("//input[@id ='attachCV']"));
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", Updateresume);
 	
-		Updateresume.sendKeys("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
+		Updateresume.sendKeys("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3+ YOE.pdf");
 		//WebElement Toast = driver.findElement(By.xpath("//p[text()='Resume has been successfully uploaded.']"));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[text()='Resume has been successfully uploaded.']")));
 		 WebElement msg = driver.findElement(By.xpath("//div[@class='msgBox success ']//p"));
@@ -54,7 +54,7 @@ public class Naukri_Resumetest {
 		 }
 		//Updateresume.click();
 		
-//		 StringSelection ss	= new StringSelection("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3.2 YOE.pdf");
+//		 StringSelection ss	= new StringSelection("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3+ YOE.pdf");
 //		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 //		 Robot rb = new Robot();
 //		 rb.delay(2000);
