@@ -42,8 +42,8 @@ public class Naukri_Resumetest {
 		ViewProfile.click();
 		WebElement Updateresume = driver.findElement(By.xpath("//input[@id ='attachCV']"));
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", Updateresume);
-	
-		Updateresume.sendKeys("C:\\Users\\Amarnath\\eclipse-workspace\\Slave\\Resume\\Amarnath_QA_3+ YOE.pdf");
+		
+		Updateresume.sendKeys(System.getProperty("user.dir") + "\\Resume\\Amarnath_QA_3+ YOE.pdf";);
 		//WebElement Toast = driver.findElement(By.xpath("//p[text()='Resume has been successfully uploaded.']"));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[text()='Resume has been successfully uploaded.']")));
 		 WebElement msg = driver.findElement(By.xpath("//div[@class='msgBox success ']//p"));
